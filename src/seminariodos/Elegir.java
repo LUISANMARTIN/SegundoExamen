@@ -22,7 +22,14 @@ public class Elegir {
                  + "2: ACTUALIZAR  \n"
                  + "3: ELIMINAR \n"
                  + "4: MOSTRAR EMPLEADOS \n"
-                 + "5: SALIR"));
+                 + "5: EMPLEADO MAYOR SALARIO \n" 
+                 + "6: EMPLEADO MENOR SALARIO \n" 
+                 + "7: ORDENAR POR NOMBRES \n"
+                 + "8: SUMAR SALARIOS MAYORES A 700000 \n" 
+                 + "9: TOTAL EMPLEADOS COMIENZAN CON A O a \n "
+                 + "10 5 EMPLEADOS MAYOR SALARIO \n"         
+                 + "11: SALIR"));
+                       
             switch (num){
                 
                 
@@ -36,11 +43,23 @@ public class Elegir {
                         break;
                 case 4: eleccion.mostrar();
                         break;
+                case 5: eleccion.mayorSalario();
+                         break;
+                case 6: eleccion.menorSalario();
+                         break;
+                case 7: eleccion.ordenarPorNombres();
+                         break;
+                case 8: eleccion.sumarSalarioMayores700000();
+                         break;
+                case 9: eleccion.determinarApellidosComienzanConAoa();
+                         break;
+                case 10:eleccion.mayorSalarios5();
+                         break;
               
                 
             }
             
-                    }while(num!=5);                
+                    }while(num!=11);                
                         break;
                 }catch(NumberFormatException e){
                     JOptionPane.showMessageDialog(null, "Ingrese numeros, por favor");
